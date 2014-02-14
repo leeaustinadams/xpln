@@ -12,7 +12,7 @@ $(document).ready(function() {
 //    });
 
 
-    $('.explaination').each(function(index, elm) {
+    $('.explanation').each(function(index, elm) {
         var selector = $(elm).attr('data-content-for'),
         explain = $(selector);
 //        explain.attr('data-content', elm.innerHTML);
