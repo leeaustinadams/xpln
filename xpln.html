@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <style>
+      body { margin-top: 100px; }
+      code { font-size: larger; color: black }
+      .comment { color: grey }
+      .reserved { color: red }
+      .type { color: orange }
+      .function { color: blue }
+      .variable { color: green }
+      .literal { color: magenta }
+      .parameter {}
+      .explaination { display: none; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class='explaination' data-step="1" data-content-for="#function_name">This is a function. It runs automatically when the program executes</p>
+      <p class='explaination' data-step="2" data-content-for="#return_type">This indicates the return type of the function will be an integer</p>
+      <p class='explaination' data-step="3" data-content-for="#opening_brace">This brace indicates the start of the code belonging to the function</p>
+      <p class='explaination' data-step="4" data-content-for="#comment">This is a comment. It has no effect on the execution of the program, but is instead a way to include information for yourself or other programmers</p>
+      <p class='explaination' data-step="5" data-content-for="#return_statement">This is the return statement. It indicates the value that this function produces as output</p>
+      <p class='explaination' data-step="6" data-content-for="#return_value">This is the value being returned from this function</p>
+      <p class='explaination' data-step="7" data-content-for="#closing_brace">This brace indicates the end of the code belonging to the function</p>
+      <pre><code><span id="return_type"
+                       class="type">int</span> <span id="function_name" class="function">main</span>(<span class="type">int</span> <span class="parameter">argc</span>, <span class="type">char *</span><span class="parameter">argv[]</span>)
+<span id='opening_brace'>{</span>
+    <span id='comment' class="comment">// Return an integer from this function</span>
+    <span id='return_statement' class="reserved">return</span> <span id="return_value" class="literal">0</span>;
+<span id='closing_brace'>}</span>
+      </code></pre>
+      <div class="btn-group">
+        <button id="tutorial-back-btn" class="btn btn-default tutorial-ctrl"><span class="glyphicon glyphicon-step-backward"></span>Back</button>
+        <button id="tutorial-show-btn" class="btn btn-default">Play <span class="glyphicon glyphicon-play"></span></button>
+        <button id="tutorial-hide-btn" class="btn btn-default">Stop <span class="glyphicon glyphicon-stop"></span> </button>
+        <button id="tutorial-fwd-btn" class="btn btn-default tutorial-ctrl">Forward<span class="glyphicon glyphicon-step-forward"></span></button>
+      </div>
+      <div class="btn-group">
+        <button id="reserved-word-btn" class="btn btn-default tutorial-ctrl highlight-btn" data-selector=".reserved">Reserved Words</button>
+        <button id="type-btn" class="btn btn-default tutorial-ctrl highlight-btn" data-selector=".type">Types</button>
+        <button id="parameter-btn" class="btn btn-default tutorial-ctrl highlight-btn" data-selector=".parameter">Parameters</button>
+      </div>
+    </div>
+  </body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/xpln.js"></script>
+</html>
